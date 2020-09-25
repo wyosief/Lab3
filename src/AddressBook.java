@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class AddressBook {
@@ -17,6 +18,10 @@ public class AddressBook {
 
     public static void main(String[] args){
         System.out.println("Address book");
+        BuddyInfo buddy = new BuddyInfo("Lola", "123 Happy Crescent", "613 256 4321");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
 
 
