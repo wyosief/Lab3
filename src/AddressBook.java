@@ -5,6 +5,7 @@ public class AddressBook {
     private ArrayList<BuddyInfo> buddies;
 
     public AddressBook() {
+
         buddies = new ArrayList<>();
     }
 
@@ -14,12 +15,26 @@ public class AddressBook {
         }
     }
 
-    public BuddyInfo removeBuddy(int index){
+    public BuddyInfo removeBuddy(int index) {
 
         if(index >= 0 && index < buddies.size()) {
             return buddies.remove(index);
         }
         return null;
+
+    }
+
+    public void printAddressBook() {
+        if(buddies.size() != 0) {
+            for (BuddyInfo aBuddy : buddies) {
+                System.out.println("Buddy: " + aBuddy.getName());
+            }
+        }
+        else {
+            System.out.println("Address book is empty");
+        }
+
+
 
     }
 
@@ -30,6 +45,7 @@ public class AddressBook {
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy1);
         addressBook.addBuddy(buddy2);
+        addressBook.printAddressBook();
         addressBook.removeBuddy(0);
 
     }
