@@ -29,6 +29,7 @@ public class AddressBook {
         BuddyInfo buddy2 = new BuddyInfo("Shawn", "456 California Avenue", "613 279 8963");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy1);
+        addressBook.addBuddy(buddy2);
         addressBook.removeBuddy(0);
 
     }
